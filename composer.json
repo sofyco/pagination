@@ -1,0 +1,35 @@
+{
+    "name": "sofyco/pagination",
+    "type": "library",
+    "description": "Pagination Library",
+    "keywords": ["php", "pagination"],
+    "homepage": "https://github.com/sofyco/pagination",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sofy Korzhova",
+            "email": "sofykorzhova@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.8",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sofyco\\Pagination\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sofyco\\Pagination\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

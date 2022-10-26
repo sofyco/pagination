@@ -4,7 +4,7 @@ namespace Sofyco\Pagination;
 
 final class Result
 {
-    public function __construct(public readonly int $count, public readonly iterable $items)
+    public function __construct(public readonly int $skip, public readonly int $limit, public readonly int $count, public readonly iterable $items)
     {
     }
 }

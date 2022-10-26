@@ -46,6 +46,7 @@ final class PaginatorTest extends TestCase
 
         $result = $paginator->paginate($builder, new Query(skip: $skip));
 
+        self::assertSame($skip, $result->skip);
         self::assertSame($count, $result->count);
         self::assertSame(\range($skip + 1, $skip + Limit::DEFAULT), (array) $result->items);
     }

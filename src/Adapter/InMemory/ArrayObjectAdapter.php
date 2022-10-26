@@ -18,9 +18,11 @@ final class ArrayObjectAdapter implements AdapterInterface
     public function getResult(Query $query): Result
     {
         if (0 === $count = $this->builder->count()) {
-            return new Result(0, []);
+            $items = [];
+        } else {
+            $items = \array_slice($this->builder->getArrayCopy(), $query->skip, $query->limit);
         }
 
-        return new Result($count, \array_slice($this->builder->getArrayCopy(), $query->skip, $query->limit));
+        return new Result(skip: $query->skip, limit: $query->limit, count: $count, items: $items);
     }
 }

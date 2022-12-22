@@ -1,5 +1,5 @@
 phpstan:
-	docker-compose run --rm -T php /usr/local/bin/php /app/vendor/bin/phpstan analyse --no-progress
+	docker-compose run --rm -T php /usr/local/bin/php /app/vendor/bin/phpstan analyse --no-progress --xdebug
 
 phpunit:
 	docker-compose run --rm -T php /usr/local/bin/php /app/vendor/bin/phpunit --testdox

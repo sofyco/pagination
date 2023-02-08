@@ -2,10 +2,10 @@
 
 namespace Sofyco\Pagination\Enum;
 
-final class Sort
+enum Sort: string
 {
-    public const ASC = 'asc';
-    public const DESC = 'desc';
+    case ASC = 'asc';
+    case DESC = 'desc';
 
     public const DIRECTIONS = [
         self::ASC,

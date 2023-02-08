@@ -6,12 +6,12 @@ use Sofyco\Pagination\Adapter\AdapterInterface;
 use Sofyco\Pagination\Query;
 use Sofyco\Pagination\Result;
 
-final class ArrayObjectAdapter implements AdapterInterface
+final readonly class ArrayObjectAdapter implements AdapterInterface
 {
     /**
      * @param \ArrayObject<int, mixed> $builder
      */
-    public function __construct(private readonly \ArrayObject $builder)
+    public function __construct(private \ArrayObject $builder)
     {
     }
 

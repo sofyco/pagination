@@ -2,9 +2,9 @@
 
 namespace Sofyco\Pagination;
 
-final class Paginator
+final readonly class Paginator
 {
-    public function __construct(private readonly Adapter\FactoryInterface $factory)
+    public function __construct(private Adapter\FactoryInterface $factory)
     {
     }
 

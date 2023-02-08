@@ -2,19 +2,19 @@
 
 namespace Sofyco\Pagination\Enum;
 
-final class Filter
+enum Filter: string
 {
-    public const EQUAL = 'eq';
-    public const NOT_EQUAL = 'neq';
-    public const IN = 'in';
-    public const NOT_IN = 'nin';
-    public const LESS_THEN = 'lt';
-    public const LESS_THEN_OR_EQUAL = 'lte';
-    public const GREATER_THEN = 'gt';
-    public const GREATER_THEN_OR_EQUAL = 'gte';
-    public const LIKE = 'like';
-    public const IS_NULL = 'absent';
-    public const NOT_NULL = 'exists';
+    case EQUAL = 'eq';
+    case NOT_EQUAL = 'neq';
+    case IN = 'in';
+    case NOT_IN = 'nin';
+    case LESS_THEN = 'lt';
+    case LESS_THEN_OR_EQUAL = 'lte';
+    case GREATER_THEN = 'gt';
+    case GREATER_THEN_OR_EQUAL = 'gte';
+    case LIKE = 'like';
+    case IS_NULL = 'absent';
+    case NOT_NULL = 'exists';
 
     public const OPERATORS = [
         self::EQUAL,

@@ -4,20 +4,13 @@ namespace Sofyco\Pagination;
 
 use Sofyco\Pagination\Enum\Limit;
 
-final class Query
+/**
+ * @property array<string, array<string, string>> $filters
+ * @property array<string, string>                $sorting
+ */
+final readonly class Query
 {
-    /**
-     * @param array<string, array<string, string>> $filters
-     * @param array<string, string>                $sorting
-     * @param int                                  $skip
-     * @param int                                  $limit
-     */
-    public function __construct(
-        public readonly array $filters = [],
-        public readonly array $sorting = [],
-        public readonly int   $skip = 0,
-        public readonly int   $limit = Limit::DEFAULT
-    )
+    public function __construct(public array $filters = [], public array $sorting = [], public int $skip = 0, public int $limit = Limit::DEFAULT)
     {
     }
 }

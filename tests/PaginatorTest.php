@@ -33,8 +33,6 @@ final class PaginatorTest extends TestCase
     }
 
     /**
-     * @param Factory $factory
-     *
      * @dataProvider adaptersInheritanceDataProvider
      */
     public function testAdapterInheritance(Factory $factory): void

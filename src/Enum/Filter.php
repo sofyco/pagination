@@ -16,7 +16,7 @@ enum Filter: string
     case IS_NULL = 'absent';
     case NOT_NULL = 'exists';
 
-    public const OPERATORS = [
+    public const array OPERATORS = [
         self::EQUAL,
         self::NOT_EQUAL,
         self::IN,

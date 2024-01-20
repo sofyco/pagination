@@ -7,7 +7,7 @@ enum Sort: string
     case ASC = 'asc';
     case DESC = 'desc';
 
-    public const DIRECTIONS = [
+    public const array DIRECTIONS = [
         self::ASC,
         self::DESC,
     ];

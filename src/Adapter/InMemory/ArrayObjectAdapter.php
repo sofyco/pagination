@@ -20,7 +20,7 @@ final readonly class ArrayObjectAdapter implements AdapterInterface
         if (0 === $count = $this->builder->count()) {
             $items = [];
         } else {
-            $items = \array_slice($this->builder->getArrayCopy(), $query->skip, $query->limit);
+            $items = \array_slice(array: $this->builder->getArrayCopy(), offset: $query->skip, length: $query->limit);
         }
 
         return new Result(skip: $query->skip, limit: $query->limit, count: $count, items: $items);

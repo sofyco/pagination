@@ -2,6 +2,7 @@
 
 namespace Sofyco\Pagination\Tests;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Sofyco\Pagination\Adapter\Exception\AdapterNotFoundException;
 use Sofyco\Pagination\Adapter\Factory;
@@ -32,9 +33,7 @@ final class PaginatorTest extends TestCase
         self::assertEmpty((array) $result->items);
     }
 
-    /**
-     * @dataProvider adaptersInheritanceDataProvider
-     */
+    #[DataProvider(methodName: 'adaptersInheritanceDataProvider')]
     public function testAdapterInheritance(Factory $factory): void
     {
         $skip = 10;
@@ -49,7 +48,7 @@ final class PaginatorTest extends TestCase
         self::assertSame(\range($skip + 1, $skip + Limit::DEFAULT), (array) $result->items);
     }
 
-    public function adaptersInheritanceDataProvider(): iterable
+    public static function adaptersInheritanceDataProvider(): iterable
     {
         $factory = new Factory();
         $factory->add(\ArrayObject::class, ArrayObjectAdapter::class);

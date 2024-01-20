@@ -4,5 +4,5 @@ namespace Sofyco\Pagination\Enum;
 
 final class Limit
 {
-    public const DEFAULT = 10;
+    public const int DEFAULT = 10;
 }

@@ -6,7 +6,7 @@ use Sofyco\Pagination\Enum\Limit;
 
 /**
  * @property array<string, array<string, string>> $filters
- * @property array<string, string>                $sorting
+ * @property array<string, string> $sorting
  */
 final class Query
 {

@@ -10,7 +10,7 @@ final class Factory implements FactoryInterface
     private array $adapters = [];
 
     /**
-     * @param class-string                   $builderClassName
+     * @param class-string $builderClassName
      * @param class-string<AdapterInterface> $adapterClassName
      */
     public function add(string $builderClassName, string $adapterClassName): void

@@ -8,7 +8,7 @@ use Sofyco\Pagination\Enum\Limit;
  * @property array<string, array<string, string>> $filters
  * @property array<string, string> $sorting
  */
-final class Query
+class Query
 {
     public function __construct(public array $filters = [], public array $sorting = [], public int $skip = 0, public int $limit = Limit::DEFAULT)
     {

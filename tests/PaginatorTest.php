@@ -13,6 +13,13 @@ use Sofyco\Pagination\Query;
 
 final class PaginatorTest extends TestCase
 {
+    protected function tearDown(): void
+    {
+        parent::tearDown();
+
+        restore_exception_handler();
+    }
+
     public function testAdapterNotFound(): void
     {
         $this->expectException(AdapterNotFoundException::class);
@@ -33,7 +40,7 @@ final class PaginatorTest extends TestCase
         self::assertEmpty((array) $result->items);
     }
 
-    #[DataProvider(methodName: 'adaptersInheritanceDataProvider')]
+    #[DataProvider('adaptersInheritanceDataProvider')]
     public function testAdapterInheritance(Factory $factory): void
     {
         $skip = 10;

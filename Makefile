@@ -1,3 +1,6 @@
+rm:
+	docker compose down
+
 phpstan:
 	docker compose run --rm -T php /usr/local/bin/php /app/vendor/bin/phpstan analyse --no-progress
 
